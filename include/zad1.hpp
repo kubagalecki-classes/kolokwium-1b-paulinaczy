@@ -12,8 +12,8 @@ using namespace std;
 class Artysta {
 public:
 	Artysta():pseudonim("Anonim"), sluchacze(0){}
-	Artysta(string x, unsigned y): pseudonim(x), sluchacze(y){}
-	virtual void graj(ostream& stream) const {
+	Artysta(const string x, unsigned y): pseudonim(x), sluchacze(y){}
+	void graj(ostream& stream) const {
 		stream << pseudonim << ": " << sluchacze << endl;
 	}
 	const string getPseudonim(ostream& l) const {
