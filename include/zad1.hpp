@@ -12,11 +12,11 @@ using namespace std;
 class Artysta {
 public:
 	Artysta():pseudonim("Anonim"), sluchacze(0){}
-	Artysta(const string x, unsigned y): pseudonim(x), sluchacze(y){}
+	Artysta(const string& x, unsigned y): pseudonim(x), sluchacze(y){}
 	void graj(ostream& stream) const {
 		stream << pseudonim << ": " << sluchacze << endl;
 	}
-	const string getPseudonim(ostream& l) const {
+	const string& getPseudonim(ostream& l) const {
 		return pseudonim;
 	}
 	unsigned getSluchacze() const {
