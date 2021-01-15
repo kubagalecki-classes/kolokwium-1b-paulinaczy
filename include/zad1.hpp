@@ -7,20 +7,22 @@
 #include <string>
 
 // tutaj klasa Artysta
+using namespace std;
+
 class Artysta {
 public:
-	Artysta():pseudonim("Anonim"), sluchacze(0){}
-	Artysta(const string& x, unsigned y): pseudonim(x), sluchacze(y){}
-	void graj(std::ostream& stream) const {
-		stream << pseudonim << ": " << sluchacze;
+	Artysta():pseudonim("Anonim"), licz_sl(0){}
+	Artysta(const string& x, unsigned y): pseudonim(x), licz_sl(y){}
+	virtual void graj(ostream& stream) const {
+		stream << pseudonim << ": " << licz_sl;
 	}
-	const string& getPseudonim(std::ostream& l) const {
+	const string& getPseudonim(ostream& l) const {
 		return pseudonim;
 	}
 	unsigned getSluchacze() const {
-		return sluchacze;
+		return licz_sl;
 	}
 private:
 	string pseudonim;
-	unsigned sluchacze;
+	unsigned licz_sl;
 };
