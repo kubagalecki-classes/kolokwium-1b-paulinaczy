@@ -4,3 +4,6 @@
 #include <vector>
 
 // tutaj funkcja stworzZespol
+vector<Artysta> stworzZespol(int f, const string& g) {
+
+}
